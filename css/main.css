@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  background-image: url(/images/apple-ios-notepad.jpg);
+  background-repeat:  no-repeat;
+  background-image: center;
+  background-position: center;
+}
+
+#heading {
+  font-size: 42px;
+  padding-top: 1px;
+  padding-bottom: 1rem;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+textarea {
+  margin-top: 2.5rem;
+  vertical-align: top;
+  border-radius: 5px;
+  /*border: none;*/
+
+}
+
+ul {
+list-style: none;
+}
+
+.add-button {
+  margin-top: 4rem;
+  border-radius: 5px;
+
+
+}
+
+.remove-button {
+  border-radius: 5px;
+}
+
+input[type="add-item"] {
+  width: 20%;
+  border-radius: 5px;
+  /*margin-bottom: 2em;*/
+}
