@@ -14,17 +14,22 @@ body {
   font-family: cursive;
 }
 
-textarea {
-  margin-top: 2.5rem;
-  vertical-align: top;
-  border-radius: 5px;
-  /*border: none;*/
-
-}
 
 ul {
 list-style: none;
+width: 30%;
+margin: 0 auto;
+background-color: rgba(255,255,255,0.8);
 }
+
+li {
+  text-align: left;
+  position: relative;
+  padding: .5em;
+}
+
+
+
 
 .add-button {
   margin-top: 4rem;
@@ -35,6 +40,12 @@ list-style: none;
 
 .remove-button {
   border-radius: 5px;
+  position: absolute;
+  top:0;
+  right:0;
+  repeat:none;
+
+
 }
 
 input[type="add-item"] {
