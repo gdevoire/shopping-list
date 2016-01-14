@@ -27,10 +27,8 @@ $(".remove-button").click(function() {
   $("#grocery-list").find('.done-button:checked').closest('li').remove();
 })
 
-
-
-
 })
+
 function addItem(){
   var newItem = $("#add-item").val()
   if (newItem == "") {
