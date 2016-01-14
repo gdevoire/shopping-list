@@ -8,17 +8,21 @@
 </head>
 <body>
   <div class="main">
-    <div id="heading">Shopkin List</div>
+    <div id="heading">Shopping List</div>
     <div class="add">
       <input id="add-item" type="text" name="input" placeholder="Add Item">
       <button class="add-button">Add Item</button>
     </div>
      <ul id="grocery-list">
       <li>
-        Gouda
-        <button class="done-button">Done</button>
+        <input type="checkbox" class="done-button">
+        <span>cheese</span>
       </li>
+      <li>
     </ul>
+  </div>
+  <div>
+  <button class="remove-button">remove</button>
   </div>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/app.js"></script>

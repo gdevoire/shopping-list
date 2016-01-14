@@ -12,15 +12,20 @@ $("#add-item").keydown(function(e) {
   }
 })
 
+$("#grocery-list").on("change", ".done-button",function(e) {
+  var groceryItem = $(this).next()
+  if( $(this).is(":checked")) {
+    groceryItem.addClass("strike")
+  }
+  else {
+    groceryItem.removeClass("strike")
+  }
 
+})
 
-$(".done-button").click(function() {
-  $(this).parent().wrap("<strike>") ;
-});
-
-$('ul').on('click', 'li', function(event){
-  $(this).wrap("<strike>");
-});
+$(".remove-button").click(function() {
+  $("#grocery-list").find('.done-button:checked').closest('li').remove();
+})
 
 
 
@@ -32,7 +37,7 @@ function addItem(){
     return alert("please enter an item")
     }
   else {
-    $('#grocery-list').append('<li>' + newItem + '<button class="done-button">Done</button></li>')
+    $('#grocery-list').append('<li> <input type="checkbox" class="done-button"><span>'  + newItem + "</span></li>")
     $("#add-item").val("")
   }
 
