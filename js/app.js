@@ -12,16 +12,15 @@ $("#add-item").keydown(function(e) {
   }
 })
 
-$(".remove-button").click(function() {
-  $('li').remove();
-})
 
 
+$(".done-button").click(function() {
+  $(this).parent().wrap("<strike>") ;
+});
 
-
-
-
-
+$('ul').on('click', 'li', function(event){
+  $(this).wrap("<strike>");
+});
 
 
 
@@ -33,7 +32,7 @@ function addItem(){
     return alert("please enter an item")
     }
   else {
-    $('#grocery-list').append('<li>' + newItem + '<button class="remove-button">Remove Item</button></li>')
+    $('#grocery-list').append('<li>' + newItem + '<button class="done-button">Done</button></li>')
     $("#add-item").val("")
   }
 
