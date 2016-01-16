@@ -27,6 +27,12 @@ $(".remove-button").click(function() {
   $("#grocery-list").find('.done-button:checked').closest('li').remove();
 })
 
+$("#grocery-list").on("click", ".fa-trash", function(){
+  $(this).parent().remove();
+})
+
+
+
 })
 
 function addItem(){
@@ -35,7 +41,7 @@ function addItem(){
     return alert("please enter an item")
     }
   else {
-    $('#grocery-list').append('<li> <input type="checkbox" class="done-button"><span>'  + newItem + "</span></li>")
+    $('#grocery-list').append('<li> <input type="checkbox" class="done-button"><span>'  + newItem + '</span> <span class="fa fa-trash"></span> </li>')
     $("#add-item").val("")
   }
 
